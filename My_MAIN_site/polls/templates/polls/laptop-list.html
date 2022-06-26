@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <body>
+            <table>
+               {% for laptop in laptops%}
+                <tr>
+                    <td>{{laptop.name}}</td>
+                    <td>{{laptop.manufacturer}}</td>
+                    <td>{{laptop.price}}</td>
+                </tr>
+               {%endfor%}
+            </table>
+           
+            <h1>Hello World</h1>
+         
+
+        </body>
+    </head>
+</html>
