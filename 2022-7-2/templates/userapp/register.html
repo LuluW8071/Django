@@ -1,0 +1,40 @@
+{% load crispy_forms_tags %}
+
+<html>
+    <head>
+<div class="card">
+    <h1 class="card-header">
+    Register and Join us
+    </h1>
+    <div class="card-body">
+    <form method="POST" class="form-group">
+    {% csrf_token %}
+    {% for field in form %}
+    {{ field.errors }}
+    {% endfor %}
+    <div class="row">
+    <div class="col">
+    {{form.username|as_crispy_field}}
+    </div>
+    <div class="col">
+    {{form.email|as_crispy_field}}
+    
+        <div class="col">
+            {{form.password1|as_crispy_field}}
+        </div>
+            <div class="col">
+                {{form.password2|as_crispy_field}}
+
+
+            </div>
+            <button type="submit" class="btn btn-success">Register</button>
+            <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+    
+
+    
+    </head>
+
+
+
+</html>
