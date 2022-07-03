@@ -55,7 +55,7 @@
                             <span class="current">
                                 Page {{ laptops.number }} of {{ laptops.paginator.num_pages }}
                             </span>
-        
+                            <br>
                           {% if laptops.has_next %}
                               <a href="?page={{ laptops.next_page_number }}">next</a>
                               <a href="?page={{ laptops.paginator.num_pages }}">last &raquo;</a>
