@@ -1,0 +1,27 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Updating</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div>
+        <h1 class="Delete">Laptop-delete-item-id-{{laptop.id}}</h1>
+    </div>    
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            
+        <div-class="alert alert-warning " role = "alert">
+                Are you sure you want to delete this item <strong> {{object }}</strong> ?
+        </div>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <button class="btn btn-success"><a href="{% url 'laptop-list' %}"> Cancel</a></button>
+    </form>
+</body>
+</html>
